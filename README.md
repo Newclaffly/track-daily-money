@@ -6,6 +6,46 @@
 
 ## Version History · ประวัติเวอร์ชัน
 
+### v0.3 (planned · วางแผน)
+
+**English**
+
+**Authentication**
+
+- User **authentication** with user ID and password (register, login, logout)
+- Session / token handling between frontend and Go backend
+- Protected routes — require login before accessing app pages
+- Auth architecture designed to support **OAuth** providers in the future (e.g. Google, LINE)
+
+**Transactions & entries**
+
+- **Currency switching** — user can change display/recording currency in settings
+- **Date selection** — log entries for today, a past date, or a chosen date; **future dates are not allowed**
+- **Tags** — assign tags to each entry for grouping and filtering
+- **Calendar table view** — record and browse entries in a calendar-style table layout
+- **CRUD** — create, read, update, and delete entries
+- **View modes** — switch between **table (calendar)** view and **record (list)** view
+- **Daily summary** — show per-day totals (income, expense, saving) in both table and record views
+
+**ไทย**
+
+**Authentication**
+
+- ระบบ **authentication** ด้วย user ID และ password (สมัครสมาชิก, เข้าสู่ระบบ, ออกจากระบบ)
+- จัดการ session / token ระหว่าง frontend และ Go backend
+- Protected routes — ต้อง login ก่อนเข้าหน้าใช้งานหลัก
+- ออกแบบ auth ให้รองรับ **OAuth** ในอนาคต (เช่น Google, LINE)
+
+**รายการและการบันทึก**
+
+- **เปลี่ยนสกุลเงิน** — ผู้ใช้เลือกสกุลเงินสำหรับแสดงผลและบันทึกได้ในหน้าตั้งค่า
+- **เลือกวันที่** — ลงบันทึกวันนี้ ย้อนหลัง หรือตามวันที่เลือกได้ **ห้ามลงบันทึกวันในอนาคต**
+- **Tag** — กำหนด tag ให้แต่ละรายการเพื่อจัดกลุ่มและกรอง
+- **มุมมองตาราง calendar** — บันทึกและดูรายการในรูปแบบตารางแบบปฏิทิน
+- **CRUD** — เพิ่ม ดู แก้ไข และลบรายการได้
+- **สลับมุมมอง** — เลือกแสดงเป็น **ตาราง (calendar)** หรือ **record (รายการ)** ได้
+- **สรุปรายวัน** — แสดงยอดรวมรายรับ รายจ่าย ออม ของแต่ละวัน ทั้งในมุมมองตารางและ record
+
 ### v0.2 (current · ปัจจุบัน)
 
 **English**
@@ -64,12 +104,21 @@ The system is designed to make daily financial logging easy — whether you ente
 
 ### Key Features
 
-| Feature | Status (v0.2) |
-|---------|---------------|
-| Daily entries (income / expense / saving) | UI ready (mock data) |
-| Slip scanning | UI placeholder |
-| LINE notifications | UI placeholder |
-| Bilingual UI (EN / TH) | Ready |
+| Feature | Status |
+|---------|--------|
+| Daily entries (income / expense / saving) | UI ready (mock data) — v0.2 |
+| Slip scanning | UI placeholder — v0.2 |
+| LINE notifications | UI placeholder — v0.2 |
+| Bilingual UI (EN / TH) | Ready — v0.2 |
+| User auth (ID / password) | Planned — v0.3 |
+| Currency switching | Planned — v0.3 |
+| Backdated / date-picked entries (no future dates) | Planned — v0.3 |
+| Entry tags | Planned — v0.3 |
+| Calendar table view | Planned — v0.3 |
+| Entry CRUD (create / edit / delete) | Planned — v0.3 |
+| Table vs record view toggle | Planned — v0.3 |
+| Daily summary per view | Planned — v0.3 |
+| OAuth (Google, LINE, …) | Planned — future |
 | Backend API | Planned |
 
 ### Tech Stack
@@ -112,6 +161,29 @@ track-daily-money/
 | `/transactions` | Transactions | Manual entry form and transaction list |
 | `/slip-scan` | Slip Scan | Upload zone and preview placeholder |
 | `/settings` | Settings | LINE notification settings and language switcher |
+
+### v0.3 Roadmap
+
+| Area | Scope |
+|------|--------|
+| **Auth** | Email/username + password, registration, JWT/session, protected routes; OAuth-ready architecture |
+| **Settings** | Currency switching |
+| **Entries** | Date picker (today / past / chosen date — no future), tags, full CRUD |
+| **Views** | Calendar table view and record (list) view with toggle |
+| **Summary** | Per-day totals shown in both table and record views |
+| **Future** | OAuth 2.0 social login (extensible provider model) |
+
+```
+Login flow (v0.3)
+  User → Login page → Backend auth API → Token stored → Access app routes
+
+Entry flow (v0.3)
+  User → Pick date (≤ today) → Add/edit entry + tags → Save
+  User → Switch table / record view → See daily summary
+
+Future OAuth flow
+  User → OAuth provider → Callback → Link or create account → Access app routes
+```
 
 ### Internationalization
 
@@ -175,12 +247,21 @@ Not specified yet — to be updated later.
 
 ### ฟีเจอร์หลัก
 
-| ฟีเจอร์ | สถานะ (v0.2) |
-|---------|--------------|
-| บันทึกรายการรายวัน (รายรับ / รายจ่าย / ออม) | UI พร้อม (ข้อมูล mock) |
-| สแกนสลิป | UI placeholder |
-| แจ้งเตือนผ่าน LINE | UI placeholder |
-| รองรับสองภาษา (EN / TH) | พร้อมใช้งาน |
+| ฟีเจอร์ | สถานะ |
+|---------|--------|
+| บันทึกรายการรายวัน (รายรับ / รายจ่าย / ออม) | UI พร้อม (ข้อมูล mock) — v0.2 |
+| สแกนสลิป | UI placeholder — v0.2 |
+| แจ้งเตือนผ่าน LINE | UI placeholder — v0.2 |
+| รองรับสองภาษา (EN / TH) | พร้อมใช้งาน — v0.2 |
+| Auth ผู้ใช้ (ID / password) | วางแผน — v0.3 |
+| เปลี่ยนสกุลเงิน | วางแผน — v0.3 |
+| ลงบันทึกย้อนหลัง / เลือกวันที่ (ห้ามวันอนาคต) | วางแผน — v0.3 |
+| Tag รายการ | วางแผน — v0.3 |
+| มุมมองตาราง calendar | วางแผน — v0.3 |
+| CRUD รายการ (เพิ่ม / แก้ไข / ลบ) | วางแผน — v0.3 |
+| สลับมุมมองตาราง / record | วางแผน — v0.3 |
+| สรุปรายวันตามมุมมอง | วางแผน — v0.3 |
+| OAuth (Google, LINE, …) | วางแผน — อนาคต |
 | Backend API | วางแผนอยู่ |
 
 ### เทคโนโลยีที่ใช้
@@ -223,6 +304,29 @@ track-daily-money/
 | `/transactions` | รายการ | ฟอร์มบันทึกด้วยตนเองและรายการทั้งหมด |
 | `/slip-scan` | สแกนสลิป | โซนอัปโหลดและตัวอย่างผลลัพธ์ |
 | `/settings` | ตั้งค่า | การแจ้งเตือน LINE และสลับภาษา |
+
+### แผน v0.3
+
+| ส่วน | ขอบเขต |
+|------|--------|
+| **Auth** | Login ด้วย email/username + password, สมัครสมาชิก, JWT/session, protected routes; ออกแบบรองรับ OAuth |
+| **ตั้งค่า** | เปลี่ยนสกุลเงิน |
+| **รายการ** | เลือกวันที่ (วันนี้ / ย้อนหลัง / วันที่เลือก — ห้ามอนาคต), tag, CRUD ครบ |
+| **มุมมอง** | ตาราง calendar และ record (รายการ) สลับได้ |
+| **สรุป** | ยอดรวมรายวันแสดงทั้งสองมุมมอง |
+| **อนาคต** | OAuth 2.0 social login (ออกแบบให้เพิ่ม provider ได้) |
+
+```
+Login flow (v0.3)
+  ผู้ใช้ → หน้า Login → Backend auth API → เก็บ token → เข้าหน้าใช้งาน
+
+Entry flow (v0.3)
+  ผู้ใช้ → เลือกวันที่ (≤ วันนี้) → เพิ่ม/แก้ไขรายการ + tag → บันทึก
+  ผู้ใช้ → สลับมุมมองตาราง / record → ดูสรุปรายวัน
+
+OAuth flow (อนาคต)
+  ผู้ใช้ → OAuth provider → Callback → เชื่อมหรือสร้างบัญชี → เข้าหน้าใช้งาน
+```
 
 ### การรองรับหลายภาษา (i18n)
 
