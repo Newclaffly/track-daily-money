@@ -1,0 +1,17 @@
+{
+  "appName": "Track Money",
+  "version": "v0.1",
+  "today": "วันนี้",
+  "filter": "กรอง",
+  "transactionType": {
+    "income": "รายรับ",
+    "expense": "รายจ่าย",
+    "saving": "ออม"
+  },
+  "summary": {
+    "income": "รายรับ",
+    "expense": "รายจ่าย",
+    "saving": "ออม",
+    "balance": "คงเหลือ"
+  }
+}

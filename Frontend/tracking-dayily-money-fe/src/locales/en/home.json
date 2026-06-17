@@ -1,0 +1,18 @@
+{
+  "title": "Dashboard",
+  "description": "Overview of today's income, expenses, and savings",
+  "addEntry": "Add entry",
+  "scanSlip": "Scan slip",
+  "recentTransactions": {
+    "title": "Recent transactions",
+    "description": "Latest entries for today",
+    "viewAll": "View all transactions"
+  },
+  "quickActions": {
+    "title": "Quick actions",
+    "description": "Common tasks for daily tracking",
+    "addEntry": "+ Add income / expense / saving",
+    "uploadSlip": "Upload transfer slip for auto entry",
+    "lineNotifications": "Configure LINE notifications"
+  }
+}

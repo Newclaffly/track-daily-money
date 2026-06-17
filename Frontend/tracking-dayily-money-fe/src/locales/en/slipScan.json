@@ -1,0 +1,17 @@
+{
+  "title": "Slip Scan",
+  "description": "Upload a transfer slip to auto-fill amount, date, and reference details",
+  "upload": {
+    "title": "Upload slip",
+    "description": "Supports bank transfer slip images",
+    "dropzone": "Drop slip image here",
+    "fileHint": "PNG, JPG up to 5MB",
+    "chooseFile": "Choose file"
+  },
+  "preview": {
+    "title": "Preview result",
+    "description": "Review before saving to transactions",
+    "empty": "No slip processed yet. Upload an image to see extracted details here.",
+    "save": "Save as transaction"
+  }
+}

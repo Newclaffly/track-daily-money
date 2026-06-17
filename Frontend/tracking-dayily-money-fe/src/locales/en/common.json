@@ -1,0 +1,17 @@
+{
+  "appName": "Track Money",
+  "version": "v0.1",
+  "today": "Today",
+  "filter": "Filter",
+  "transactionType": {
+    "income": "Income",
+    "expense": "Expense",
+    "saving": "Saving"
+  },
+  "summary": {
+    "income": "Income",
+    "expense": "Expense",
+    "saving": "Saving",
+    "balance": "Balance"
+  }
+}

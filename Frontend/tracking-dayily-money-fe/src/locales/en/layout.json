@@ -1,0 +1,14 @@
+{
+  "tagline": "Daily spending tracker",
+  "pageTitle": "Daily Money Tracker",
+  "pageDescription": "Record income, expenses, and savings every day",
+  "nav": {
+    "dashboard": "Dashboard",
+    "transactions": "Transactions",
+    "slipScan": "Slip Scan",
+    "settings": "Settings",
+    "home": "Home",
+    "list": "List",
+    "scan": "Scan"
+  }
+}

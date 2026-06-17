@@ -1,0 +1,27 @@
+{
+  "title": "Settings",
+  "description": "Configure notifications and app preferences",
+  "line": {
+    "title": "LINE notifications",
+    "description": "Get alerts for spending and daily summaries",
+    "dailySummary": "Daily summary",
+    "dailySummaryHint": "Send end-of-day spending summary",
+    "overspendingAlert": "Overspending alert",
+    "overspendingAlertHint": "Notify when daily expense exceeds limit",
+    "userId": "LINE user ID",
+    "userIdPlaceholder": "Connect LINE account",
+    "connect": "Connect LINE"
+  },
+  "general": {
+    "title": "General",
+    "description": "Basic app preferences",
+    "currency": "Currency",
+    "currencyValue": "THB (฿)",
+    "language": "Language",
+    "save": "Save preferences"
+  },
+  "language": {
+    "en": "English",
+    "th": "ไทย"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Transactions",
+  "description": "Record and review daily income, expenses, and savings",
+  "newEntry": {
+    "title": "New entry",
+    "description": "Add a manual transaction for today"
+  },
+  "allEntries": {
+    "title": "All entries",
+    "description": "Transactions logged for today"
+  },
+  "form": {
+    "type": "Type",
+    "amount": "Amount",
+    "category": "Category",
+    "categoryPlaceholder": "Food, salary, transport...",
+    "note": "Note",
+    "notePlaceholder": "Optional note",
+    "save": "Save entry"
+  }
+}

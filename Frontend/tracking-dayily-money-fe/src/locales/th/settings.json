@@ -1,0 +1,27 @@
+{
+  "title": "ตั้งค่า",
+  "description": "กำหนดการแจ้งเตือนและการตั้งค่าแอป",
+  "line": {
+    "title": "การแจ้งเตือน LINE",
+    "description": "รับแจ้งเตือนการใช้จ่ายและสรุปรายวัน",
+    "dailySummary": "สรุปรายวัน",
+    "dailySummaryHint": "ส่งสรุปการใช้จ่ายตอนสิ้นวัน",
+    "overspendingAlert": "แจ้งเตือนใช้จ่ายเกิน",
+    "overspendingAlertHint": "แจ้งเตือนเมื่อรายจ่ายรายวันเกินกำหนด",
+    "userId": "LINE user ID",
+    "userIdPlaceholder": "เชื่อมต่อบัญชี LINE",
+    "connect": "เชื่อมต่อ LINE"
+  },
+  "general": {
+    "title": "ทั่วไป",
+    "description": "การตั้งค่าพื้นฐานของแอป",
+    "currency": "สกุลเงิน",
+    "currencyValue": "THB (฿)",
+    "language": "ภาษา",
+    "save": "บันทึกการตั้งค่า"
+  },
+  "language": {
+    "en": "English",
+    "th": "ไทย"
+  }
+}
